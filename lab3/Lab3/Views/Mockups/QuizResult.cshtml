@@ -1,0 +1,11 @@
+﻿@model Lab3.Models.QuizResultModel
+@{
+    ViewBag.Title = "Quiz";
+}
+<h2>Quiz results</h2>
+<h4>Right answers @Model.CorrectAnswerCount out @Model.Count</h4>
+<ol>
+    @foreach (var question in Model.Questions) {
+        <li>@question.ToString() @question.UserAnswer</li>
+    }
+</ol>

@@ -1,0 +1,13 @@
+﻿@model Lab3.Models.QuizAnswerModel
+@{
+    ViewBag.Title = "Quiz";
+}
+<h2>Quiz</h2>
+<b>@ViewBag.Question</b><br/>
+<form asp-controller="Mockups">
+    <input asp-for="Answer" class="mb-3 mr-3"/><span asp-validation-for="Answer"></span><br/>
+    <div class="mb-3">
+        <input type="submit" value="Next" name="action" class="btn btn-outline-secondary btn-sm"/>
+        <input type="submit" value="Finish" name="action" class="btn btn-primary btn-sm"/>
+    </div>
+</form>
